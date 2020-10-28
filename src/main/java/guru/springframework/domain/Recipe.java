@@ -27,19 +27,15 @@ public class Recipe {
     private Byte[] image;
     private Difficulty difficulty;
     private Notes notes;
-
-    @DBRef
     private Set<Category> categories = new HashSet<>();
 
     public void setNotes(Notes notes) {
         if (notes != null) {
             this.notes = notes;
-//            notes.setRecipe(this);
         }
     }
 
     public Recipe addIngredient(Ingredient ingredient){
-//        ingredient.setRecipe(this);
         this.ingredients.add(ingredient);
         return this;
     }
